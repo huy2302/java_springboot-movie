@@ -1,0 +1,35 @@
+server:
+  port: 8080
+
+spring:
+  datasource:
+    username: root
+    password: 123456
+    url: jdbc:mysql://127.0.0.1:3306/movie
+#    username: root
+#    password: phuc152002
+#    url: jdbc:mysql://apimusic.cz8stropxoyg.ap-southeast-2.rds.amazonaws.com/movie2
+    driver-class-name: com.mysql.cj.jdbc.Driver
+  jpa:
+    show-sql: true
+    hibernate:
+      ddl-auto: update
+      format_sql: true
+  servlet:
+    multipart:
+      max-file-size: 5MB
+      max-request-size: 5MB
+      file-size-threshold: 2KB
+#  security:
+#    user:
+#      name: root
+#      password: 123
+#    oauth2:
+#      client:
+#        registration:
+#          google:
+#            clientId: 1022754851250-dem1d9h59r7id6ga8e8ukpa2668fmf15.apps.googleusercontent.com
+#            clientSecret: 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
+#            scope:
+#              - email
+#              - profile
